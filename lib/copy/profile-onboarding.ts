@@ -1,0 +1,55 @@
+export const PROFILE_COPY = {
+  landing: {
+    title: 'Tu historial con el Estado',
+    rutLabel: 'Ingresa tu RUT de empresa',
+    rutExample: '12.345.678-9',
+    continue: 'Continuar',
+    rutHelp: 'Vemos lo que le has vendido al Estado — no lo que declaras.',
+    company: 'Empresa',
+    naturalPerson: 'Persona Natural',
+    login: 'Iniciar sesión',
+  },
+  footer: {
+    text: 'Datos vía API oficial de ChileCompra · Sin afiliación gubernamental · Próxima actualización 06:00',
+    privacy: 'Política de Privacidad',
+    data: 'Tus datos',
+  },
+  loading: ['Leyendo tus órdenes de compra…', 'Detectando tus rubros…', 'Buscando qué te conviene hoy…'],
+  aha: {
+    soldPrefix: 'Le has vendido al Estado',
+    soldSuffix: 'veces en 2 años',
+    tendersSuffix: 'licitaciones abiertas te convienen hoy',
+    noAgainst: 'Sin señales en contra detectadas',
+    pnTitle: 'Resumen reducido para Persona Natural',
+  },
+  gate: {
+    titlePrefix: 'Crea tu cuenta gratis para ver las',
+    emailLabel: 'Email',
+    cta: 'Crear cuenta gratis',
+    privacy: 'Acepto la Política de Privacidad',
+    digest: 'Quiero recibir mi resumen de la mañana por correo',
+    blocked: 'Acepta la Política de Privacidad para continuar.',
+  },
+  refine: {
+    title: 'Esto es lo que detectamos. Ajústalo si quieres.',
+    cta: 'Activar mi radar',
+    skip: 'Saltar por ahora',
+    thin: 'historial acotado — afina tu perfil',
+  },
+  branches: {
+    declarative: 'Aún no encontramos historial tuyo en Mercado Público. Cuéntanos qué vendes y te mostramos por dónde empezar.',
+    mirrorFallback: 'estamos cargando el histórico; tu perfil se enriquecerá solo',
+    buyerRut: 'Este RUT es de un organismo comprador',
+    stale: 'tu actividad reciente es baja',
+  },
+  errors: {
+    invalidRut: 'Ingresa un RUT válido, por ejemplo 12.345.678-9.',
+    lookupRateLimited: 'Muchas consultas en poco tiempo. Inténtalo de nuevo más tarde.',
+    timeout: 'No pudimos completar la consulta. Intenta nuevamente.',
+    loginSoftDeleted: 'Esta cuenta está en recuperación dentro de los 30 días.',
+    radar: 'Radar',
+    hiddenTender: 'Licitación abierta por revelar',
+    teaserLine: 'Piden {producto} — se lo has vendido {n} veces al Estado',
+  },
+} as const;
+export const POLICY_VERSION = '2026-07-12';
