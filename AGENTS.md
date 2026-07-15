@@ -49,3 +49,14 @@ migración.
 La fuente de verdad de cada feature está en /docs/specs (specs 00-06 +
 07-inventario-copy.md como fuente de /lib/copy). Este archivo gobierna el
 CÓMO transversal; las specs gobiernan el QUÉ.
+
+## Canonicidad de la documentación
+
+A partir de este commit, **el repo es la copia canónica** de specs,
+AGENTS.md, CLAUDE.md, tokens.css y agentes evaluadores. El Project
+Knowledge de Claude.ai es un espejo de lectura para la sesión de
+planificación.
+
+Toda corrección a estos documentos se hace primero en el repo (commit
+directo a main o PR) y luego se re-sube manualmente el archivo actualizado
+al Project Knowledge. Nunca al revés.
