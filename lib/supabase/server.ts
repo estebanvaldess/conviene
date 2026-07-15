@@ -1,21 +1,9 @@
 import "server-only";
-
 import { createClient } from "@supabase/supabase-js";
-
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY;
-
-if (!supabaseUrl) {
-  throw new Error("Missing SUPABASE_URL environment variable");
+export function getSupabaseAdmin() {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const supabaseSecretKey = process.env.SUPABASE_SECRET_KEY;
+  if (!supabaseUrl || !supabaseSecretKey) return null;
+  return createClient(supabaseUrl, supabaseSecretKey, { auth: { persistSession: false, autoRefreshToken: false } });
 }
-
-if (!supabaseSecretKey) {
-  throw new Error("Missing SUPABASE_SECRET_KEY environment variable");
-}
-
-export const supabaseAdmin = createClient(supabaseUrl, supabaseSecretKey, {
-  auth: {
-    persistSession: false,
-    autoRefreshToken: false,
-  },
-});
+export const supabaseAdmin = getSupabaseAdmin();

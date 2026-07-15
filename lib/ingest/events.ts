@@ -1,5 +1,5 @@
 export const ALLOWED_EVENT_TYPES = new Set([
-  'card_opened', 'filter_used', 'api_request', 'ingest_retry_queued', 'guardrail_alert', 'unknown_status_seen', 'ingest_run', 'digest_delayed'
+  'card_opened', 'filter_used', 'api_request', 'ingest_retry_queued', 'guardrail_alert', 'unknown_status_seen', 'ingest_run', 'digest_delayed', 'rut_submitted', 'profile_built', 'aha_viewed', 'signup_completed', 'profile_refined', 'radar_activated', 'duplicate_rut_signup', 'profile_enriched', 'lookup_rate_limited'
 ]);
 
 const buckets = new Map<string, number[]>();
